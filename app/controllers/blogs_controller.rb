@@ -7,10 +7,15 @@ class BlogsController < ApplicationController
   end
 
   def create
+    if user_signed_in?
     @blog=Blog.new(params_blog)
     if @blog.save
         redirect_back(fallback_location: index)
     end
+  else
+    flash[:notice]="You must sign in first"
+    redirect_to new_user_session_path
+  end
   end
 
   private
