@@ -9,6 +9,7 @@ class BlogsController < ApplicationController
   def create
     if user_signed_in?
     @blog=Blog.new(params_blog)
+    @blog.user_id=current_user.id
     if @blog.save
         redirect_back(fallback_location: index)
     end

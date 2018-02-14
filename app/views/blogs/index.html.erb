@@ -1,8 +1,10 @@
+<div class="jumbotron">
 <% @blogs.reverse_each do |f| %>
 <div>
 	<p><%= f.body %></p>
+	<p>@By : <%= f.user_id %></p>
 </div>
 	<hr>
 <% end %>
-
+</div>
 <%= render 'form' %>
