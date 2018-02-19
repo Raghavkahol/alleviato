@@ -1,10 +1,11 @@
-<div class="jumbotron">
+<div class="background-tile fix_div">
+
 <% @blogs.reverse_each do |f| %>
 <div>
 	<p><%= f.user_name%>: <%= f.body %></p>
-
 </div>
-	<hr>
 <% end %>
-</div>
+
 <%= render 'form' %>
+	</div>
+</div>

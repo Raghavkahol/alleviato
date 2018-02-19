@@ -3,7 +3,7 @@ class BlogsController < ApplicationController
 
   def index
     @blog=Blog.new
-    @blogs=Blog.limit(12).reverse_order
+    @blogs=Blog.all.reverse_order
   end
 
   def create

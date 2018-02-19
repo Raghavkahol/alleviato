@@ -1,7 +1,7 @@
-<%= link_to "Add new books" , new_book_path %>
+<%= link_to "Add new books" , new_book_path%>
 <% @books.reverse_each do |f| %>
 <div>
-  <div class="jumbotron">
+  <div class="background-tile">
   <p>Title : <%= f.title %></p>
 	<p>Author : <%= f.author %></p>
   <p>Description : <%= f.description %></p>

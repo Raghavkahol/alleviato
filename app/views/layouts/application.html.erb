@@ -36,12 +36,13 @@
 </div>
     <div>
       <ul class="navbar-brand">
-        <l1><%= link_to "Sign Up", new_user_registration_path %></l1>
+
+
         <% if user_signed_in? %>
           <l1><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></l1>
         <% else %>
           <l1><%= link_to "Log In", new_user_session_path %></l1>
-
+            <l1><%= link_to "Sign Up", new_user_registration_path %></l1>
         <% end %>
       </ul>
     </div>

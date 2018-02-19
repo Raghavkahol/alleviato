@@ -15,3 +15,22 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ .background-tile {
+ 	box-sizing: border-box;
+ 	background-color: white;
+  color: black;
+ 	border-radius: 5px;
+ 	box-shadow: 3px 3px 5px 6px #ccc;
+ 	padding: 1.5em 1.25em;
+ }
+
+.fix_div{
+  width: 1000px;
+height: 600px;
+overflow: auto;
+}
+
+.new_book{
+  float: right;
+}
