@@ -12,7 +12,7 @@ class BlogsController < ApplicationController
     @blog.user_id=current_user.id
     @blog.user_name=current_user.name
     if @blog.save
-        redirect_back(fallback_location: index)
+        redirect_back(fallback_location: index, :anchor => "wall")
     end
   else
     flash[:notice]="You must sign in first"

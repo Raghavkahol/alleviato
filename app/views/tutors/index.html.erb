@@ -1,0 +1,13 @@
+<%= link_to "Add My Profile" , new_tutor_path%>
+<% @tutors.each do |f| %>
+<div>
+  <div class="background-tile">
+  <p>Name : <%= f.user_name %></p>
+	<p>Email : <%= f.user_email %></p>
+  <p>Subject : <%= f.subject %></p>
+  <p>Timings : <%= f.timing %></p>
+  <%= link_to "Intrested" , tutors_path %>
+</div>
+	<hr>
+</div>
+<% end %>
