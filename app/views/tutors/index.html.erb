@@ -1,13 +1,10 @@
 <%= link_to "Add My Profile" , new_tutor_path%>
-<% @tutors.each do |f| %>
-<div>
+<% @tutors.each do |tutor| %>
   <div class="background-tile">
-  <p>Name : <%= f.user_name %></p>
-	<p>Email : <%= f.user_email %></p>
-  <p>Subject : <%= f.subject %></p>
-  <p>Timings : <%= f.timing %></p>
-  <%= link_to "Intrested" , tutors_path %>
-</div>
+
+  <p>Name : <%= tutor.user_name %></p>
+  <p>Subject : <%= tutor.subject %></p>
+  	<%= link_to "Read More", tutor_path(tutor), :class => 'btn btn-default' %>
+    </div>
 	<hr>
-</div>
 <% end %>

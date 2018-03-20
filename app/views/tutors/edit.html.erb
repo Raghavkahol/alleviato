@@ -1,0 +1,9 @@
+	<div class="background-tile">
+		<h1>Edit Profile</h1>
+		<%= simple_form_for @tutor do |f| %>
+			<%= f.input :subject%>
+			<%= f.input :timing %>
+			<%= f.input :price %>
+		<%= f.button :submit ,:class => 'btn-custom2' %>
+	<% end %>
+	</div>

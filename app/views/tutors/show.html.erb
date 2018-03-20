@@ -1,0 +1,13 @@
+<div class="background-tile">
+  <p>Name : <%= @tutor.user_name %></p>
+  <p>Email: <%= @tutor.user_email %></p>
+  <p>Subject: <%= @tutor.subject %></p>
+  <p>Price: <%= @tutor.price %></p>
+  <p>Timing: <%= @tutor.timing %></p>
+  <%  if user_signed_in? && @tutor.user_email == current_user.email %>
+    <%= link_to "Edit",edit_tutor_path(@tutor) %>
+    <%= link_to "Delete",tutor_path(@tutor),method: :delete, data: {confirm: 'Are you sure'} %>
+      <%else%>
+  <%= link_to "Intrested" , tutors_path %>
+  <%end%>
+</div>

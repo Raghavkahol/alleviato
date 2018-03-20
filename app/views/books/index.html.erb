@@ -3,10 +3,8 @@
 <div>
   <div class="background-tile">
   <p>Title : <%= f.title %></p>
-	<p>Author : <%= f.author %></p>
-  <p>Description : <%= f.description %></p>
   <p>Uploaded By : <%= f.user_name %></p>
-  <%= link_to "Buy" , books_path %>
+    	<%= link_to "Read More", book_path(f), :class => 'btn btn-default' %>
 </div>
 	<hr>
 </div>

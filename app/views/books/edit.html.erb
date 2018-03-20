@@ -1,0 +1,10 @@
+<div class="background-tile">
+  <h1>Edit Book</h1>
+  <%= simple_form_for @book do |f| %>
+    <%= f.input :title%>
+    <%= f.input :author %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+  <%= f.button :submit ,:class => 'btn-custom2' %>
+<% end %>
+</div>
